@@ -1,0 +1,24 @@
+
+
+<main class="flex w-screen h-screen items-center justify-center p-4  ">
+    <div class="bg-transparent max-w-[90%] sm:max-w-[500px] md:max-w-[600px] h-[600px] aspect-square border-2 rounded-2xl flex items-center justify-center text-green-900">
+        <h2 class="text-5xl"> Student <br>SignIn</h2>
+        <div class="flex max-w-[90%] sm:max-w-[300px] md:max-w-[400px] h-[400px] aspect-square rounded-2xl items-center justify-center p-4">
+           <form class="flex flex-col gap-4" (ngSubmit)="onSubmit()">
+             <label>Name :</label>
+              <input type="text" [(ngModel)]="student.name" name="name" placeholder="Enter Name" required class="border px-2 py-1 rounded">
+             <label>Email :</label>
+              <input type="email" [(ngModel)]="student.email" name="email" placeholder="Enter Email" required class="border px-2 py-1 rounded">
+             <label>Mobile :</label>
+              <input type="number" [(ngModel)]="student.mobile" name="mobile" placeholder="Enter Mobile" required class="border px-2 py-1 rounded">
+             <label>Password :</label>
+               <input type="password" [(ngModel)]="student.password" name="Password" placeholder="Enter your Password" required class="border px-2 py-1 rounded">
+
+               <button type="submit" class="bg-blue-500 text-white px-4 py-2 ">Sign In</button>
+
+               <p>If you have an accounta <a routerLink="/login" class="underline">Login</a> </p>
+           </form>
+
+        </div>
+    </div>
+</main>

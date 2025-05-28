@@ -1,0 +1,25 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100" *ngIf="student">
+  <div class="bg-white rounded-xl shadow-md p-8 w-full max-w-sm text-center">
+    <h2 class="text-xl font-bold mb-6">Student Profile</h2>
+
+    <div class="flex justify-center mb-4">
+      <img
+        [src]="'http://localhost:3000/uploads/' + student.profileImg"
+        alt="Profile Image"
+        class="w-24 h-24 rounded-full border-4 border-gray-300 object-cover"
+      />
+    </div>
+
+    <div class="text-left space-y-2 mb-6">
+      <p><span class="font-semibold">Name :</span> {{ student.name }}</p>
+      <p><span class="font-semibold">Email :</span> {{ student.email }}</p>
+      <p><span class="font-semibold">Phone Number :</span> {{ student.mobile }}</p>
+    </div>
+
+    <a [routerLink]="['/profile/edit', student.slug]">
+      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">
+        Edit
+      </button>
+    </a>
+  </div>
+</div>
